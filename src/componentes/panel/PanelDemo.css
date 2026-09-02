@@ -1,0 +1,184 @@
+.panel {
+  min-height: 100svh;
+  padding: clamp(4rem, 8vw, 7rem) 1.25rem;
+  background-color: #f6f1e9;
+  color: #2f2b27;
+}
+
+.panel__container {
+  width: min(100%, 70rem);
+  margin-inline: auto;
+}
+
+.panel__demo {
+  width: fit-content;
+  margin: 0 0 2rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #c5a474;
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  text-transform: uppercase;
+}
+
+.panel__eyebrow {
+  margin: 0;
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.panel__title {
+  margin: 1rem 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.panel__actions {
+ display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.panel__actions button,
+.panel__actions a {
+  width: 100%;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border: 1px solid #747956;
+  background-color: #747956;
+  color: #f6f1e9;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(0.8rem, 2.5vw, 1.15rem);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.panel__actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.panel__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1rem);
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.panel__stats article {
+  min-width: 0;
+  min-height: clamp(9rem, 28vw, 12rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid rgba(116, 121, 86, 0.5);
+}
+
+.panel__stats span {
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.panel__stats strong {
+ color: #2f2b27;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 10vw, 5rem);
+  font-weight: 400;
+  line-height: 0.9;
+
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
+
+
+.panel__table-container {
+  width: 100%;
+  margin-top: clamp(3rem, 7vw, 5rem);
+  overflow: visible;
+}
+
+.panel__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.panel__table th,
+.panel__table td {
+  padding: clamp(0.8rem, 2.5vw, 1.25rem)
+    clamp(0.3rem, 1.5vw, 0.75rem);
+  border-bottom: 1px solid rgba(116, 121, 86, 0.35);
+  color: #2f2b27;
+  font-size: clamp(0.85rem, 3.2vw, 1.2rem);
+  line-height: 1.25;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.panel__table th {
+  color: #747956;
+  font-size: clamp(0.65rem, 2.4vw, 0.95rem);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Nombre y apellido */
+.panel__table th:nth-child(1),
+.panel__table td:nth-child(1) {
+  width: 55%;
+  overflow-wrap: anywhere;
+}
+
+/* Asistencia */
+.panel__table th:nth-child(2),
+.panel__table td:nth-child(2) {
+  width: 20%;
+  text-align: center;
+}
+
+/* Cantidad de invitados */
+.panel__table th:nth-child(3),
+.panel__table td:nth-child(3) {
+  width: 25%;
+  text-align: center;
+}
+
+.panel__table td:nth-child(3) {
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
+
+
+.panel__notice {
+  margin: 2rem 0 0;
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+
+@media (min-width: 900px) {
+  .panel__stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

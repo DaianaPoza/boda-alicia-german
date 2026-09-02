@@ -1,0 +1,147 @@
+.confirmation {
+  width: 100%;
+  padding: clamp(7rem, 12vw, 10rem) 1.25rem;
+  background-color: #f6f1e9;
+  color: #2f2b27;
+}
+
+.confirmation__content {
+  width: min(100%, 42rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.confirmation__title {
+  margin: 0;
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.confirmation__intro {
+  max-width: 30rem;
+  margin: clamp(2rem, 5vw, 3rem) auto 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.confirmation__form {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+  margin-top: clamp(3.5rem, 8vw, 5rem);
+}
+
+.confirmation__field {
+  display: grid;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.confirmation__field span,
+.confirmation__question {
+  color: #2f2b27;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  font-weight: 400;
+}
+
+.confirmation__field input {
+  width: 100%;
+  min-height: 3.75rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(116, 121, 86, 0.55);
+  outline: none;
+  background-color: transparent;
+  color: #2f2b27;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+}
+
+.confirmation__field input:focus {
+  border-color: #747956;
+  box-shadow: 0 0 0 1px #747956;
+}
+
+.confirmation__group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.confirmation__question {
+  width: 100%;
+  text-align: center;
+}
+
+.confirmation__options {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 12rem), 1fr)
+  );
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.confirmation__option {
+  cursor: pointer;
+}
+
+.confirmation__option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.confirmation__option span {
+  min-height: 3.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem;
+  border: 1px solid #747956;
+  border-radius: 999px;
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+}
+
+.confirmation__option input:checked + span {
+  background-color: #747956;
+  color: #f6f1e9;
+}
+
+.confirmation__button {
+  width: fit-content;
+  min-height: 3.75rem;
+  margin-inline: auto;
+  padding: 0.9rem 2rem;
+  border: 1px solid #747956;
+  border-radius: 999px;
+  background-color: #747956;
+  color: #f6f1e9;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.confirmation__button:hover {
+  background-color: transparent;
+  color: #747956;
+}
+
+.confirmation__message {
+  margin: -1rem 0 0;
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+}

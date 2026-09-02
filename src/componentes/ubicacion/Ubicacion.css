@@ -1,0 +1,99 @@
+.location {
+  width: 100%;
+  padding: clamp(7rem, 12vw, 10rem) 1.25rem;
+  overflow: hidden;
+  background-color: #f6f1e9;
+  color: #2f2b27;
+}
+
+.location__content {
+  width: min(100%, 60rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.location__title {
+  margin: 0;
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.location__detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.location__line {
+  width: clamp(2.5rem, 8vw, 6rem);
+  height: 1px;
+  background-color: #c5a474;
+}
+
+.location__pin {
+  color: #c5a474;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1;
+}
+
+.location__place {
+  margin: clamp(2rem, 5vw, 3rem) 0 0;
+  color: #2f2b27;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.location__address {
+  margin: clamp(1.25rem, 3vw, 2rem) 0 0;
+  color: #2f2b27;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.location__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding: 0.85rem 1.75rem;
+  border: 1px solid #747956;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.location__button:hover {
+  background-color: #747956;
+  color: #f6f1e9;
+}
+
+.location__button:active {
+  transform: scale(0.97);
+}
+
+.location__button:focus-visible {
+  outline: 2px solid #c5a474;
+  outline-offset: 4px;
+}

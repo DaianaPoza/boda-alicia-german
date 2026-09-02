@@ -1,0 +1,117 @@
+.countdown {
+  width: 100%;
+  padding: clamp(5rem, 10vw, 8rem) 1.25rem;
+  overflow: hidden;
+  background-color: #747956;
+  color: #f6f1e9;
+}
+
+.countdown__content {
+  width: min(100%, 60rem);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.countdown__title {
+  margin: 0;
+  color: #f6f1e9;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.countdown__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.countdown__item {
+  min-width: clamp(4rem, 10vw, 7rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown__number {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-weight: 400;
+  line-height: 1;
+
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
+
+.countdown__label {
+  margin-top: 0.8rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+.countdown__separator {
+  width: 1px;
+  height: clamp(3.5rem, 7vw, 5rem);
+  background-color: rgba(246, 241, 233, 0.4);
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .countdown {
+    padding: 5.5rem 0.75rem;
+  }
+
+  .countdown__title {
+    font-size: 2rem;
+  }
+
+  .countdown__items {
+    gap: 0;
+    margin-top: 3.5rem;
+  }
+
+  .countdown__item {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .countdown__number {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .countdown__label {
+    margin-top: 0.65rem;
+    font-size: clamp(0.58rem, 2.6vw, 0.75rem);
+    letter-spacing: 0.06em;
+  }
+
+  .countdown__separator {
+    height: 3.5rem;
+  }
+}
+
+/* Celulares muy angostos */
+@media (max-width: 360px) {
+  .countdown {
+    padding-inline: 0.4rem;
+  }
+
+  .countdown__title {
+    font-size: 2rem;
+  }
+
+  .countdown__number {
+    font-size: 1.9rem;
+  }
+
+  .countdown__label {
+    font-size: 0.55rem;
+    letter-spacing: 0.04em;
+  }
+}
