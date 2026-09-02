@@ -25,7 +25,7 @@ function Cover({ onEnter }) {
           type="button"
           onClick={onEnter}
         >
-          bienvenidos
+          Bienvenidos
         </button>
       </div>
     </main>
