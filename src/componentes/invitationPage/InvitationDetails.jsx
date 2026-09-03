@@ -6,6 +6,7 @@ import Ubicacion from "../ubicacion/Ubicacion.jsx";
 import Dresscode from "../dresscode/Dresscode.jsx";
 import Confirmacion from "../confirmacion/Confirmacion.jsx";
 import useScrollReveal from "./useScrollReveal";
+import Footer from "../footer/Footer.jsx";
 
 
 function InvitationDetails() {
@@ -22,6 +23,7 @@ function InvitationDetails() {
       <Ubicacion />
       <Dresscode />
       <Confirmacion />
+      <Footer />
     </main>
   );
 }

@@ -1,1 +1,68 @@
 
+.music-button {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1000;
+
+  width: 3.25rem;
+  height: 3.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: 1px solid #c5a474;
+  border-radius: 50%;
+
+  background-color: rgba(116, 121, 86, 0.94);
+  box-shadow: 0 0.35rem 1rem
+    rgba(47, 43, 39, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Icono de pausa */
+
+.music-button__pause {
+  display: flex;
+  gap: 0.28rem;
+}
+
+.music-button__pause span {
+  width: 0.2rem;
+  height: 1rem;
+
+  border-radius: 1rem;
+  background-color: #f6f1e9;
+}
+
+/* Icono de reproducción */
+
+.music-button__play {
+  width: 0;
+  height: 0;
+
+  margin-left: 0.2rem;
+
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 0.75rem solid #f6f1e9;
+}
+
+.music-button:focus-visible {
+  outline: 2px solid #c5a474;
+  outline-offset: 0.2rem;
+}
+
+@media (hover: hover) {
+  .music-button:hover {
+    transform: scale(1.06);
+    background-color: #656a49;
+  }
+}
