@@ -1,5 +1,10 @@
 import { useState } from "react";
+
+import { supabase } from "../../lib/supabase.js";
+
 import "./Confirmacion.css";
+
+const EVENTO_SLUG = "boda-alicia-german";
 
 const opcionesCantidad = Array.from(
   { length: 10 },
@@ -10,24 +15,83 @@ function Confirmacion() {
   const [nombre, setNombre] = useState("");
   const [asiste, setAsiste] = useState("");
   const [cantidad, setCantidad] = useState(1);
+
   const [mensaje, setMensaje] = useState("");
+  const [tipoMensaje, setTipoMensaje] =
+    useState("");
+
+  const [enviando, setEnviando] = useState(false);
 
   const handleAsistencia = (respuesta) => {
     setAsiste(respuesta);
     setMensaje("");
+    setTipoMensaje("");
 
     if (respuesta === "no") {
       setCantidad(1);
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!nombre.trim() || !asiste) {
+    const nombreLimpio = nombre.trim();
+
+    if (!nombreLimpio || !asiste) {
       setMensaje(
         "Completá tu nombre y seleccioná una opción."
       );
+      setTipoMensaje("error");
+
+      return;
+    }
+
+    const cantidadFinal =
+      asiste === "si" ? Number(cantidad) : 0;
+
+    if (
+      asiste === "si" &&
+      (
+        !Number.isInteger(cantidadFinal) ||
+        cantidadFinal < 1 ||
+        cantidadFinal > 10
+      )
+    ) {
+      setMensaje(
+        "Seleccioná una cantidad válida de invitados."
+      );
+      setTipoMensaje("error");
+
+      return;
+    }
+
+    setEnviando(true);
+    setMensaje("");
+    setTipoMensaje("");
+
+    const { error } = await supabase
+      .from("confirmaciones")
+      .insert([
+        {
+          evento: EVENTO_SLUG,
+          nombre_apellido: nombreLimpio,
+          asiste: asiste === "si",
+          cantidad_invitados: cantidadFinal,
+          restriccion_alimentaria: null,
+        },
+      ]);
+
+    if (error) {
+      console.error(
+        "Error al guardar la confirmación:",
+        error
+      );
+
+      setMensaje(
+        "No pudimos registrar tu respuesta. Intentá nuevamente."
+      );
+      setTipoMensaje("error");
+      setEnviando(false);
 
       return;
     }
@@ -35,10 +99,12 @@ function Confirmacion() {
     setMensaje(
       "¡Gracias! Tu respuesta fue registrada."
     );
+    setTipoMensaje("success");
 
     setNombre("");
     setAsiste("");
     setCantidad(1);
+    setEnviando(false);
   };
 
   return (
@@ -55,6 +121,7 @@ function Confirmacion() {
         <form
           className="confirmation__form"
           onSubmit={handleSubmit}
+          aria-busy={enviando}
         >
           <label className="confirmation__field">
             <span>Nombre y apellido</span>
@@ -62,15 +129,22 @@ function Confirmacion() {
             <input
               type="text"
               value={nombre}
-              onChange={(event) =>
-                setNombre(event.target.value)
-              }
+              onChange={(event) => {
+                setNombre(event.target.value);
+                setMensaje("");
+                setTipoMensaje("");
+              }}
               placeholder="Escribí tu nombre completo"
+              autoComplete="name"
+              disabled={enviando}
               required
             />
           </label>
 
-          <fieldset className="confirmation__group">
+          <fieldset
+            className="confirmation__group"
+            disabled={enviando}
+          >
             <legend className="confirmation__question">
               ¿Vas a asistir?
             </legend>
@@ -120,6 +194,7 @@ function Confirmacion() {
                     Number(event.target.value)
                   )
                 }
+                disabled={enviando}
                 required
               >
                 {opcionesCantidad.map((numero) => (
@@ -137,13 +212,21 @@ function Confirmacion() {
           <button
             className="confirmation__button"
             type="submit"
+            disabled={enviando}
           >
-            Enviar confirmación
+            {enviando
+              ? "Enviando..."
+              : "Enviar confirmación"}
           </button>
 
           {mensaje && (
             <p
-              className="confirmation__message"
+              className={`confirmation__message confirmation__message--${tipoMensaje}`}
+              role={
+                tipoMensaje === "error"
+                  ? "alert"
+                  : "status"
+              }
               aria-live="polite"
             >
               {mensaje}

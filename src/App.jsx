@@ -14,8 +14,8 @@ function App() {
     window.location.search
   );
 
-  const showPanelDemo =
-    params.get("panel") === "demo";
+  const showPanel =
+  params.get("panel") === "cliente";
 
   const handleEnter = () => {
     const audio = audioRef.current;
@@ -50,9 +50,9 @@ function App() {
     }
   };
 
-  if (showPanelDemo) {
-    return <PanelDemo />;
-  }
+ if (showPanel) {
+  return <PanelDemo />;
+}
 
   return (
     <>

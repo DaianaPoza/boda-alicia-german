@@ -179,6 +179,145 @@
 
 @media (min-width: 900px) {
   .panel__stats {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(
+      3,
+      minmax(0, 1fr)
+    );
   }
+}
+
+
+@media (max-width: 899px) {
+  .panel__stats article:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+
+
+
+
+
+
+.panel--centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel__login {
+  width: min(100%, 32rem);
+
+  text-align: center;
+}
+
+.panel__login-intro {
+  margin: 2rem auto 0;
+
+  color: #2f2b27;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  line-height: 1.45;
+}
+
+.panel__login-form {
+  display: grid;
+  gap: 1.75rem;
+
+  margin-top: 3rem;
+}
+
+.panel__field {
+  display: grid;
+  gap: 0.65rem;
+
+  text-align: left;
+}
+
+.panel__field span {
+  color: #2f2b27;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+}
+
+.panel__field input {
+  width: 100%;
+  min-height: 3.75rem;
+
+  padding: 0.85rem 1rem;
+
+  border: 1px solid rgba(116, 121, 86, 0.55);
+  outline: none;
+
+  background-color: transparent;
+  color: #2f2b27;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+}
+
+.panel__field input:focus {
+  border-color: #747956;
+
+  box-shadow: 0 0 0 1px #747956;
+}
+
+.panel__login-button {
+  width: fit-content;
+  min-height: 3.5rem;
+
+  margin-inline: auto;
+  padding: 0.85rem 2.5rem;
+
+  border: 1px solid #747956;
+  border-radius: 999px;
+
+  background-color: #747956;
+  color: #f6f1e9;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.panel__login-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.panel__message {
+  margin: 1.5rem 0 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.panel__message--error {
+  color: #9b4f46;
+}
+
+.panel__loading,
+.panel__empty {
+  margin: 3rem 0;
+
+  color: #747956;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.panel__actions {
+  grid-template-columns:
+    repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.panel__actions button:not(:disabled) {
+  cursor: pointer;
 }
