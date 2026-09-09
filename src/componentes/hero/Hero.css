@@ -1,12 +1,16 @@
 .hero {
   position: relative;
+
   width: 100%;
   min-height: 100svh;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   overflow: hidden;
   isolation: isolate;
+
   background-color: #34312d;
 }
 
@@ -14,109 +18,204 @@
   position: absolute;
   inset: 0;
   z-index: -3;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center;
 }
 
-/* La opacidad se aplica con esta capa */
+/*
+  Oscurece principalmente las zonas donde aparecen
+  los textos y mantiene los rostros más iluminados.
+*/
+
 .hero__overlay {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(25, 22, 18, 0.28) 0%,
-      rgba(25, 22, 18, 0.42) 50%,
-      rgba(25, 22, 18, 0.55) 100%
-    );
+
+  background: linear-gradient(
+    180deg,
+    rgba(25, 22, 18, 0.45) 0%,
+    rgba(25, 22, 18, 0.2) 38%,
+    rgba(25, 22, 18, 0.25) 70%,
+    rgba(25, 22, 18, 0.62) 100%
+  );
 }
 
 .hero__content {
-  width: min(90%, 62rem);
-  padding: clamp(2rem, 6vw, 5rem) 1rem;
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  padding: 0 1rem;
+
   color: #f6f1e9;
   text-align: center;
 }
 
-.hero__eyebrow {
-  margin: clamp(2rem, 4vw, 3rem) 0 0;
-  font-family: Arial, sans-serif;
-  font-size: clamp(0.7rem, 2vw, 0.9rem);
-  font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: clamp(0.25rem, 1vw, 0.45rem);
-  text-transform: uppercase;
-}
+/* Alicia & Germán */
 
 .hero__names {
+  position: absolute;
+  top: 12svh;
+  left: 50%;
+
+  width: min(94%, 62rem);
   margin: 0;
+
+  transform: translateX(-50%);
+
+  color: #f6f1e9;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3.5rem, 11vw, 8rem);
+  font-size: clamp(3rem, 8vw, 7rem);
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.95;
   letter-spacing: -0.04em;
- white-space: nowrap;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+
+  text-shadow:
+  0 0 1px rgba(255, 255, 255, 0.95),
+  0 0 4px rgba(246, 241, 233, 0.65),
+  0 0 10px rgba(246, 241, 233, 0.3);
 }
 
 .hero__names span {
   display: inline-block;
+
   margin-inline: 0.08em;
+
   color: #d3bd91;
   font-style: italic;
+
+  text-shadow:
+    0 0 1px rgba(255, 248, 232, 0.95),
+    0 0 5px rgba(211, 189, 145, 0.65),
+    0 0 10px rgba(211, 189, 145, 0.3);
 }
 
-/* Celulares angostos */
-@media (max-width: 480px) {
-  .hero {
-    min-height: 100svh;
-  }
+/* ¡Nos casamos! */
 
+.hero__eyebrow {
+  position: absolute;
+  right: 1rem;
+  bottom: clamp(4rem, 8svh, 6rem);
+  left: 1rem;
+
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  margin: 0 auto;
+  padding: 0.75rem clamp(1.5rem, 5vw, 3rem);
+
+
+  color: #f6f1e9;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: clamp(0.2rem, 0.8vw, 0.4rem);
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  text-shadow:
+  0 0 1px rgba(255, 255, 255, 0.95),
+  0 0 4px rgba(246, 241, 233, 0.6),
+  0 0 9px rgba(246, 241, 233, 0.28);
+
+border-top: 1px solid rgba(211, 189, 145, 0.9);
+  border-bottom: 1px solid rgba(211, 189, 145, 0.9);
+
+
+
+}
+
+.hero__eyebrow::before,
+.hero__eyebrow::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+
+  width: 100%;
+  height: 0.7rem;
+
+  transform: translateX(-50%);
+
+  filter: drop-shadow(
+    0 0 3px rgba(211, 189, 145, 0.75)
+  );
+}
+
+.hero__eyebrow::before {
+  top: 0;
+
+  border-top: 1px solid #d3bd91;
+  border-radius: 50% 50% 0 0;
+}
+
+.hero__eyebrow::after {
+  bottom: 0;
+
+  border-bottom: 1px solid #d3bd91;
+  border-radius: 0 0 50% 50%;
+}
+
+
+
+
+
+/* Celulares angostos */
+
+@media (max-width: 480px) {
   .hero__image {
     object-position: 58% center;
   }
 
   .hero__content {
-    width: 100%;
-    padding-inline: 0.75rem;
+    padding-inline: 0.65rem;
   }
 
   .hero__names {
-    width: 100%;
-    font-size: clamp(2.6rem, 12vw, 3.8rem);
+    top: 14svh;
+
+    width: calc(100% - 1.25rem);
+
+    font-size: clamp(3rem, 11vw, 3.5rem);
     line-height: 1;
     letter-spacing: -0.05em;
-    white-space: nowrap;
   }
 
   .hero__names span {
-    margin-inline: 0.04em;
+    margin-inline: 0.03em;
   }
 
   .hero__eyebrow {
-    margin-top: 1.25rem;
-    margin-bottom: 0;
-    font-size: 0.68rem;
-    letter-spacing: 0.22rem;
+    right: 0.75rem;
+    bottom: 8svh;
+    left: 0.75rem;
+
+    max-width: calc(100% - 1.5rem);
+    padding: 0.7rem 1.25rem;
+
+    font-size: clamp(1.25rem, 5.5vw, 1.55rem);
+    letter-spacing: 0.2rem;
   }
 }
 
 /* Tablets y pantallas grandes */
+
 @media (min-width: 768px) {
   .hero__image {
     object-position: center 45%;
   }
 
-  .hero__overlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(25, 22, 18, 0.2) 0%,
-        rgba(25, 22, 18, 0.38) 50%,
-        rgba(25, 22, 18, 0.5) 100%
-      );
+  .hero__names {
+    top: 11svh;
+  }
+
+  .hero__eyebrow {
+    bottom: 7svh;
   }
 }

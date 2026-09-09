@@ -1,6 +1,13 @@
 .location {
   width: 100%;
-  padding: clamp(7rem, 12vw, 10rem) 1.25rem;
+
+
+   padding:
+    clamp(2rem, 5vw, 4rem)
+    1.25rem
+    clamp(7rem, 12vw, 10rem);
+
+
   overflow: hidden;
   background-color: #f6f1e9;
   color: #2f2b27;

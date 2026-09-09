@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "./Confirmacion.css";
 
+const opcionesCantidad = Array.from(
+  { length: 10 },
+  (_, index) => index + 1
+);
+
 function Confirmacion() {
   const [nombre, setNombre] = useState("");
   const [asiste, setAsiste] = useState("");
@@ -23,6 +28,7 @@ function Confirmacion() {
       setMensaje(
         "Completá tu nombre y seleccioná una opción."
       );
+
       return;
     }
 
@@ -74,10 +80,12 @@ function Confirmacion() {
                 <input
                   type="radio"
                   name="asiste"
+                  value="si"
                   checked={asiste === "si"}
                   onChange={() =>
                     handleAsistencia("si")
                   }
+                  required
                 />
 
                 <span>Sí, voy a asistir</span>
@@ -87,10 +95,12 @@ function Confirmacion() {
                 <input
                   type="radio"
                   name="asiste"
+                  value="no"
                   checked={asiste === "no"}
                   onChange={() =>
                     handleAsistencia("no")
                   }
+                  required
                 />
 
                 <span>No podré asistir</span>
@@ -102,16 +112,25 @@ function Confirmacion() {
             <label className="confirmation__field">
               <span>Cantidad de invitados</span>
 
-              <input
-                type="number"
-                min="1"
-                max="20"
+              <select
+                className="confirmation__select"
                 value={cantidad}
                 onChange={(event) =>
-                  setCantidad(event.target.value)
+                  setCantidad(
+                    Number(event.target.value)
+                  )
                 }
                 required
-              />
+              >
+                {opcionesCantidad.map((numero) => (
+                  <option
+                    value={numero}
+                    key={numero}
+                  >
+                    {numero}
+                  </option>
+                ))}
+              </select>
             </label>
           )}
 

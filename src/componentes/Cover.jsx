@@ -17,7 +17,8 @@ function Cover({ onEnter }) {
         />
 
         <p className="cover__phrase">
-          Celebremos juntos este nuevo comienzo
+          Empieza una nueva etapa en nuestras vidas.. 
+          <br /> y no imaginábamos celebrarla de otra manera que rodeados de las personas que queremos.
         </p>
 
         <button
@@ -25,7 +26,7 @@ function Cover({ onEnter }) {
           type="button"
           onClick={onEnter}
         >
-          Bienvenidos
+          ingresar
         </button>
       </div>
     </main>

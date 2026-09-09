@@ -1,0 +1,286 @@
+.moments {
+  width: 100%;
+
+  padding:
+    clamp(7rem, 12vw, 10rem)
+    1.25rem
+    clamp(2.5rem, 5vw, 4rem);
+
+  overflow: hidden;
+
+  background-color: #f6f1e9;
+  color: #2f2b27;
+}
+
+.moments__content {
+  width: min(100%, 60rem);
+
+  margin-inline: auto;
+
+  text-align: center;
+}
+
+/* Título */
+
+.moments__title {
+  margin: 0;
+
+  color: #747956;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* Recorrido */
+
+.moments__timeline {
+  position: relative;
+
+  width: min(100%, 34rem);
+
+  margin:
+    clamp(3.5rem, 8vw, 5.5rem)
+    auto
+    0;
+}
+
+/*
+  Línea curva que pasa detrás de los íconos.
+*/
+
+.moments__path {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+
+  width: clamp(5rem, 20vw, 9rem);
+  height: 100%;
+
+  overflow: visible;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+.moments__path path {
+  fill: none;
+  stroke: #c5a474;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+
+  filter:
+    drop-shadow(
+      0 0 3px rgba(197, 164, 116, 0.2)
+    );
+}
+
+/* Lista */
+
+.moments__list {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  gap: clamp(2.5rem, 7vw, 4rem);
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.moments__item {
+  min-height: clamp(6.5rem, 18vw, 8.5rem);
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    clamp(4.5rem, 14vw, 6rem)
+    minmax(0, 1fr);
+  align-items: center;
+  column-gap: clamp(0.75rem, 3vw, 1.5rem);
+}
+
+/* Íconos */
+
+.moments__icon {
+  grid-column: 2;
+  grid-row: 1;
+
+  width: clamp(4.25rem, 13vw, 5.75rem);
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #c5a474;
+  border-radius: 50%;
+
+  background-color: #f6f1e9;
+  color: #747956;
+
+  box-shadow:
+    0 0 0 0.35rem rgba(246, 241, 233, 0.9);
+
+  transition:
+    background-color 250ms ease,
+    color 250ms ease,
+    transform 250ms ease;
+}
+
+.moments__icon svg {
+  width: 48%;
+  height: 48%;
+
+  stroke-width: 1.25;
+}
+
+/* Alternancia sobre la curva */
+
+.moments__item--left .moments__icon {
+  transform: translateX(-0.75rem);
+}
+
+.moments__item--right .moments__icon {
+  transform: translateX(0.75rem);
+}
+
+/* Nombres */
+
+.moments__name {
+  margin: 0;
+
+  color: #2f2b27;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.35rem, 4vw, 2rem);
+  font-weight: 400;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.moments__item--left .moments__name {
+  grid-column: 1;
+  grid-row: 1;
+
+  padding-right: 0.25rem;
+
+  text-align: right;
+}
+
+.moments__item--right .moments__name {
+  grid-column: 3;
+  grid-row: 1;
+
+  padding-left: 0.25rem;
+
+  text-align: left;
+}
+
+/* Conector con la ubicación */
+
+.moments__connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+
+  margin-top: clamp(3.5rem, 8vw, 5rem);
+}
+
+.moments__connector-line {
+  width: clamp(2.5rem, 8vw, 5rem);
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #c5a474
+  );
+}
+
+.moments__connector-line:last-child {
+  background: linear-gradient(
+    to right,
+    #c5a474,
+    transparent
+  );
+}
+
+.moments__connector-diamond {
+  width: 0.65rem;
+  height: 0.65rem;
+
+  border: 1px solid #c5a474;
+
+  transform: rotate(45deg);
+
+  box-shadow:
+    0 0 5px rgba(197, 164, 116, 0.3);
+}
+
+/* Celulares */
+
+@media (max-width: 480px) {
+  .moments {
+    padding:
+      6.5rem
+      1rem
+      2.5rem;
+  }
+
+  .moments__timeline {
+    width: 100%;
+
+    margin-top: 4rem;
+  }
+
+  .moments__list {
+    gap: 2.5rem;
+  }
+
+  .moments__item {
+    min-height: 6.5rem;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      4.5rem
+      minmax(0, 1fr);
+
+    column-gap: 0.7rem;
+  }
+
+  .moments__icon {
+    width: 4.25rem;
+  }
+
+  .moments__item--left .moments__icon {
+    transform: translateX(-0.5rem);
+  }
+
+  .moments__item--right .moments__icon {
+    transform: translateX(0.5rem);
+  }
+
+  .moments__name {
+    font-size: clamp(1.2rem, 5.5vw, 1.55rem);
+  }
+
+  .moments__path {
+    width: 5.5rem;
+  }
+
+  .moments__connector {
+    margin-top: 3.5rem;
+  }
+}
+
+/* Accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+  .moments__icon {
+    transition: none;
+  }
+}

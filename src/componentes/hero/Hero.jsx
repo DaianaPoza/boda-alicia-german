@@ -14,7 +14,7 @@ function Hero() {
 
       <div className="hero__content">
         <h1 className="hero__names">
-          Alicia <span>&</span> Germán
+          Alicia <span>&</span> German
         </h1>
 
         <p className="hero__eyebrow">

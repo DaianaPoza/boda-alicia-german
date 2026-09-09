@@ -88,3 +88,55 @@
   outline: 2px solid #c5a474;
   outline-offset: 4px;
 }
+
+
+/* Animación de entrada de la portada */
+
+.cover__names,
+.cover__rings,
+.cover__phrase,
+.cover__button {
+  opacity: 0;
+  animation: coverFadeUp 900ms ease-out forwards;
+}
+
+.cover__names {
+  animation-delay: 150ms;
+}
+
+.cover__rings {
+  animation-delay: 450ms;
+}
+
+.cover__phrase {
+  animation-delay: 750ms;
+}
+
+.cover__button {
+  animation-delay: 1050ms;
+}
+
+@keyframes coverFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respeta la configuración de accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+  .cover__names,
+  .cover__rings,
+  .cover__phrase,
+  .cover__button {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
