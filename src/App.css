@@ -66,3 +66,33 @@
     background-color: #656a49;
   }
 }
+
+/* Tipografía cursiva general de la tarjeta */
+
+.cover,
+.invitation {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+}
+
+/* Formularios y botones no siempre heredan la fuente */
+
+.cover button,
+.invitation button,
+.invitation input,
+.invitation select,
+.invitation textarea {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+}
+
+/* Mantiene la cursiva clara y legible */
+
+.invitation p,
+.invitation label,
+.invitation button,
+.invitation input,
+.invitation select,
+.invitation textarea {
+  font-weight: 500;
+}

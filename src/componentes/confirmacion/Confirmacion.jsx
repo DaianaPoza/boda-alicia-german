@@ -115,7 +115,7 @@ function Confirmacion() {
         </h2>
 
         <p className="confirmation__intro">
-          Esperamos poder compartir esta noche con vos
+          Una persona por grupo familiar deberá confirmar e indicar cuántos asistirán
         </p>
 
         <form

@@ -34,20 +34,11 @@ function InvitationDetails() {
       <Ubicacion />
 
       <NuestraHistoria
-        imagen={historiaInicio}
-        alt="Alicia y German al comienzo de su historia"
-        variante="intro"
-        ariaLabel="Primer momento de nuestra historia"
       />
 
       <Dresscode />
 
-      <NuestraHistoria
-        imagen={historiaCamino}
-        alt="Alicia y German compartiendo un momento juntos"
-        variante="phrase"
-        ariaLabel="Segundo momento de nuestra historia"
-      />
+     
 
       <Confirmacion />
 

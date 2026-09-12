@@ -6,7 +6,7 @@ function Cover({ onEnter }) {
     <main className="cover">
       <div className="cover__content">
         <h1 className="cover__names">
-          Alicia <span>&</span> Germán
+          Alicia <span>&</span> German
         </h1>
 
         <img
