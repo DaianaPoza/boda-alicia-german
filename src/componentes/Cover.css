@@ -22,11 +22,12 @@
   margin: 0;
   color: #747956;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.4rem, 10vw, 6rem);
+  font-size: clamp(3.2rem, 10vw, 6rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.04em;
   white-space: nowrap;
+  
 }
 
 .cover__names span {
@@ -46,11 +47,12 @@
   max-width: 40rem;
   margin: clamp(2rem, 5vw, 3rem) auto 0;
   color: #747956;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.15rem, 3.5vw, 1.8rem);
+  font-size: clamp(1.40rem, 3.5vw, 1.8rem);
   font-weight: 400;
   line-height: 1.4;
   text-wrap: balance;
+  font-family: "Great Vibes", cursive;
+    
 }
 
 .cover__button {
@@ -62,17 +64,19 @@
   border-radius: 999px;
   background-color: transparent;
   color: #747956;
-  font-family: "Cormorant Garamond", serif;
+
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   cursor: pointer;
+  font-family: "Great Vibes", cursive;
   transition:
     background-color 180ms ease,
     color 180ms ease,
     transform 180ms ease;
+
 }
 
 .cover__button:hover {

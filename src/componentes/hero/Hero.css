@@ -72,10 +72,11 @@
   color: #f6f1e9;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 400;
+  font-weight: 50;
   line-height: 0.95;
   letter-spacing: -0.04em;
   white-space: nowrap;
+  
 
   text-shadow:
   0 0 1px rgba(255, 255, 255, 0.95),
@@ -104,22 +105,20 @@
   right: 1rem;
   bottom: clamp(4rem, 8svh, 6rem);
   left: 1rem;
-
   width: fit-content;
   max-width: calc(100% - 2rem);
   margin: 0 auto;
   padding: 0.75rem clamp(1.5rem, 5vw, 3rem);
-
-
   color: #f6f1e9;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  font-weight: 400;
+ 
+  font-size: clamp(3rem, 3vw, 2rem);
+  font-weight: 50;
   line-height: 1;
   letter-spacing: clamp(0.2rem, 0.8vw, 0.4rem);
-  text-transform: uppercase;
+ font-family: "Great Vibes", cursive;
+ letter-spacing: 0.04em;
   white-space: nowrap;
-
+  
   text-shadow:
   0 0 1px rgba(255, 255, 255, 0.95),
   0 0 4px rgba(246, 241, 233, 0.6),
@@ -200,8 +199,8 @@ border-top: 1px solid rgba(211, 189, 145, 0.9);
     max-width: calc(100% - 1.5rem);
     padding: 0.7rem 1.25rem;
 
-    font-size: clamp(1.25rem, 5.5vw, 1.55rem);
-    letter-spacing: 0.2rem;
+    
+    letter-spacing: 0.04rem;
   }
 }
 

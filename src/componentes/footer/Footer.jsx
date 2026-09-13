@@ -22,11 +22,9 @@ function Footer() {
           Alicia <span>&</span> German
         </p>
 
-        <div className="footer__line"></div>
-
         <p className="footer__phrase">
           Nos vemos para compartir una noche
-          inolvidable
+          inolvidable...
         </p>
 
         <p className="footer__date">

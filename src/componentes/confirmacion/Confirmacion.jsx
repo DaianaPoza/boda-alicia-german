@@ -111,7 +111,7 @@ function Confirmacion() {
     <section className="confirmation">
       <div className="confirmation__content">
         <h2 className="confirmation__title">
-          CONFIRMA TU ASISTENCIA
+          Confirmá tu asistencia
         </h2>
 
         <p className="confirmation__intro">
@@ -124,7 +124,7 @@ function Confirmacion() {
           aria-busy={enviando}
         >
           <label className="confirmation__field">
-            <span>Nombre y apellido</span>
+            <span>Nombre y Apellido</span>
 
             <input
               type="text"

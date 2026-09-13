@@ -50,7 +50,7 @@ function CuentaRegresiva() {
     <section className="countdown">
       <div className="countdown__content">
         <h2 className="countdown__title">
-          CUENTA REGRESIVA
+          Cuenta regresiva
         </h2>
 
         <div className="countdown__items">

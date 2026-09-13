@@ -15,20 +15,23 @@
 .dresscode__title {
   margin: 0;
   color: #f6f1e9;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(3rem, 6vw, 3rem);
   font-weight: 400;
   line-height: 1;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.04rem;
+font-weight: 50;
 }
 
 .dresscode__intro {
   max-width: 34rem;
   margin: clamp(2.5rem, 6vw, 4rem) auto 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.3rem, 3vw, 1.75rem);
-  font-weight: 400;
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
   line-height: 1.5;
   text-wrap: balance;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.04rem;
+font-weight: 50;
 }
 
 .dresscode__style {
@@ -37,15 +40,13 @@
   margin: clamp(2rem, 5vw, 3rem) auto 0;
   padding: 0.75rem 1.25rem;
   border: 1px solid rgba(246, 241, 233, 0.45);
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.2rem, 2.8vw, 1.6rem);
-  font-weight: 400;
+  font-size: clamp(1.3rem, 2.8vw, 1.6rem);
   line-height: 1.4;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.04rem;
+font-weight: 50;
 }
 
-.dresscode__style span {
-  font-style: italic;
-}
 
 .dresscode__palette {
   margin-top: clamp(3.5rem, 8vw, 5.5rem);
@@ -53,20 +54,24 @@
 
 .dresscode__palette-title {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.7rem, 4vw, 2.4rem);
-  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 2.4rem);
+  
   line-height: 1;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.04rem;
+font-weight: 50;
+ margin-bottom: 1.5rem;
 }
 
 .dresscode__palette-text {
   max-width: 32rem;
   margin: 1.5rem auto 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
-  font-weight: 400;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   line-height: 1.45;
   text-wrap: balance;
+  font-family: "Great Vibes";
+  letter-spacing: 0.04rem;
+font-weight: 50;
 }
 
 .dresscode__colors {

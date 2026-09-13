@@ -15,7 +15,7 @@ function Dresscode() {
     <section className="dresscode">
       <div className="dresscode__content">
         <h2 className="dresscode__title">
-          CODIGO DE VESTIMENTA
+          Código de vestimenta
         </h2>
 
        <p className="dresscode__intro">
@@ -29,31 +29,44 @@ function Dresscode() {
           <span> natural, elegante y relajado</span>
         </p>
 
-        <div className="dresscode__palette">
-          <h3 className="dresscode__palette-title">
-            Paleta de colores
-          </h3>
 
-          <p className="dresscode__palette-text">
-            Para acompañar la estética de la celebración,
-            elegí tu look dentro de esta paleta de colores
-          </p>
 
-          <div
-            className="dresscode__colors"
-            aria-label="Paleta sugerida para la vestimenta"
-          >
-            {colors.map((color) => (
-              <span
-                key={color.name}
-                className="dresscode__color"
-                style={{ backgroundColor: color.value }}
-                title={color.name}
-                aria-label={color.name}
-              ></span>
-            ))}
-          </div>
-        </div>
+
+<div className="dresscode__palette">
+  <h3 className="dresscode__palette-title">
+    Paleta de colores
+  </h3>
+
+  <div
+    className="dresscode__colors"
+    aria-label="Paleta sugerida para la vestimenta"
+  >
+    {colors.map((color) => (
+      <span
+        key={color.name}
+        className="dresscode__color"
+        style={{
+          backgroundColor: color.value,
+        }}
+        title={color.name}
+        aria-label={color.name}
+      ></span>
+    ))}
+  </div>
+
+  <p className="dresscode__palette-text">
+    Para acompañar la estética de la celebración,
+    elegí tu look dentro de esta paleta de colores
+  </p>
+</div>
+
+
+
+
+
+
+      
+        
 
       </div>
     </section>

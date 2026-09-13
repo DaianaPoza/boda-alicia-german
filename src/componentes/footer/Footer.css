@@ -1,9 +1,7 @@
 .footer {
   position: relative;
-
   width: 100%;
   min-height: 100svh;
-
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -16,7 +14,7 @@
   overflow: hidden;
   isolation: isolate;
 
-  background-color: #747956;
+  background-color: #f8f9f5;
   color: #f6f1e9;
 }
 
@@ -59,15 +57,17 @@
   background:
     linear-gradient(
       to bottom,
-      rgba(65, 70, 47, 0.82) 0%,
-      rgba(65, 70, 47, 0.68) 28%,
-      rgba(65, 70, 47, 0.38) 55%,
-      rgba(47, 43, 39, 0.28) 75%,
-      rgba(47, 43, 39, 0.52) 100%
+      rgba(246, 241, 233, 0.62) 0%,
+      rgba(246, 241, 233, 0.45) 30%,
+      rgba(246, 241, 233, 0.18) 58%,
+      rgba(47, 43, 39, 0.08) 78%,
+      rgba(47, 43, 39, 0.26) 100%
     );
 
   pointer-events: none;
 }
+
+
 
 /* Contenido distribuido sobre la fotografía */
 
@@ -133,20 +133,16 @@
 
 .footer__phrase {
   max-width: 28rem;
-
   margin: 0 auto;
-
   color: #f6f1e9;
-
-  font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.4rem, 5vw, 2rem);
-  font-style: italic;
-  font-weight: 500;
   line-height: 1.4;
-
   text-wrap: balance;
+transform: translateY(1rem);
+font-family: "Great Vibes", cursive;
+  letter-spacing: 0.04rem;
+font-weight: 50;
 
-transform: translateY(-1.5rem);
 
 }
 
@@ -154,15 +150,16 @@ transform: translateY(-1.5rem);
 
 .footer__date {
   margin: auto 0 0;
-
   color: #ead9bc;
-
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-size: clamp(2rem, 3vw, 1.25rem);
   font-style: italic;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.2em;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.04rem;
+font-weight: 50;
+  
 }
 
 /* Celulares */
@@ -191,31 +188,17 @@ transform: translateY(-1.5rem);
     min-height: calc(100svh - 6.5rem);
   }
 
-  .footer__overlay {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(65, 70, 47, 0.88) 0%,
-        rgba(65, 70, 47, 0.72) 30%,
-        rgba(65, 70, 47, 0.4) 54%,
-        rgba(47, 43, 39, 0.2) 74%,
-        rgba(47, 43, 39, 0.55) 100%
-      );
-  }
 
   .footer__names {
-    font-size: clamp(2.2rem, 10vw, 3.2rem);
+    font-size: clamp(2.25rem, 8vw, 4rem);
   }
 
   .footer__phrase {
     max-width: 22rem;
 
-    font-size: clamp(1.35rem, 6vw, 1.75rem);
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
   }
 
-  .footer__date {
-    font-size: 1rem;
-  }
 }
 
 /* Celulares angostos */
@@ -228,8 +211,6 @@ transform: translateY(-1.5rem);
   .footer__phrase {
     max-width: 22rem;
   font-size: clamp(1.35rem, 6vw, 1.75rem);
-
-  transform: translateY(-2.25rem);
   }
 
   .footer__background {
@@ -255,4 +236,28 @@ transform: translateY(-1.5rem);
   .footer__background {
     transform: none;
   }
+}
+
+
+
+
+
+
+
+
+
+.footer__names,
+.footer__phrase,
+.footer__date{
+  color: #56562d;
+
+  text-shadow:
+    0 1px 3px rgba(112, 110, 110, 0.8);
+}
+
+.footer__date{
+  color: #f5f5ee;
+
+  text-shadow:
+    0 1px 3px rgba(242, 243, 239, 0.8);
 }

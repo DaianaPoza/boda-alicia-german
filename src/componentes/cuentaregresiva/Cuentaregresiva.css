@@ -15,10 +15,11 @@
 .countdown__title {
   margin: 0;
   color: #f6f1e9;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 6vw, 3rem);
-  font-weight: 400;
+  font-size: clamp(3rem, 6vw, 3rem);
+  font-weight: 50;
   line-height: 1;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.04rem;
 }
 
 .countdown__items {
@@ -37,22 +38,24 @@
 }
 
 .countdown__number {
-  font-family: "Cormorant Garamond", serif;
   font-size: clamp(2.5rem, 6vw, 4.25rem);
   font-weight: 400;
   line-height: 1;
-
   font-variant-numeric: lining-nums;
   font-feature-settings: "lnum" 1;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.04rem;
 }
 
 .countdown__label {
   margin-top: 0.8rem;
-  font-family: "Cormorant Garamond", serif;
+  
   font-size: clamp(0.8rem, 1.8vw, 1rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.12em;
+  font-family: "Great Vibes", cursive;
+  letter-spacing: 0.04rem;
 }
 
 .countdown__separator {
@@ -67,9 +70,7 @@
     padding: 5.5rem 0.75rem;
   }
 
-  .countdown__title {
-    font-size: 2rem;
-  }
+ 
 
   .countdown__items {
     gap: 0;
@@ -81,14 +82,11 @@
     flex: 1;
   }
 
-  .countdown__number {
-    font-size: clamp(2rem, 10vw, 3rem);
-  }
+ 
 
   .countdown__label {
     margin-top: 0.65rem;
-    font-size: clamp(0.58rem, 2.6vw, 0.75rem);
-    letter-spacing: 0.06em;
+    
   }
 
   .countdown__separator {
@@ -102,16 +100,5 @@
     padding-inline: 0.4rem;
   }
 
-  .countdown__title {
-    font-size: 2rem;
-  }
-
-  .countdown__number {
-    font-size: 1.9rem;
-  }
-
-  .countdown__label {
-    font-size: 0.55rem;
-    letter-spacing: 0.04em;
-  }
+ 
 }

@@ -8,7 +8,7 @@ function Ubicacion() {
     <section className="location">
       <div className="location__content">
         <h2 className="location__title">
-          ¿DÓNDE?
+          ¿Dónde?
         </h2>
 
         <div className="location__detail">
