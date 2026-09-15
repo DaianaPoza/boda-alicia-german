@@ -1,35 +1,47 @@
 .confirmation {
   width: 100%;
-  padding: clamp(7rem, 12vw, 10rem) 1.25rem;
+ padding:
+    clamp(7rem, 12vw, 10rem)
+    clamp(0.75rem, 4vw, 1.25rem);
   background-color: #f6f1e9;
   color: #2f2b27;
+   box-sizing: border-box;
+     overflow-x: hidden;
 }
 
 .confirmation__content {
   width: min(100%, 42rem);
   margin-inline: auto;
   text-align: center;
+    box-sizing: border-box;
+
 }
 
 .confirmation__title {
-  margin: 0;
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0 auto;
+
   color: #747956;
-  font-size: clamp(3rem, 6vw, 3rem);
-  line-height: 1;
-  text-wrap: balance;
-  font-family: "Great Vibes", cursive;
-  letter-spacing: 0.04rem;
-font-weight: 50;
-white-space: nowrap;
+
+ font-family: "Dancing Script", cursive;
+  font-size: clamp(2rem, 10vw, 3rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+
+  text-align: center;
+  white-space: nowrap;
 }
 
 .confirmation__intro {
   max-width: 30rem;
   margin: clamp(2rem, 5vw, 3rem) auto 0;
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-size: clamp(1.1rem, 3vw, 1.75rem);
   line-height: 1.45;
   text-wrap: balance;
-  font-family: "Great Vibes", cursive;
+  font-family: "Dancing Script", cursive;
   letter-spacing: 0.04rem;
 font-weight: 50;
 }
@@ -51,7 +63,7 @@ font-weight: 50;
   color: #2f2b27;
   font-size: clamp(1.25rem, 3vw, 1.6rem);
   font-weight: 400;
-  font-family: "Great Vibes", cursive;
+  font-family: "Dancing Script", cursive;
   letter-spacing: 0.04rem;
 font-weight: 50;
 }
@@ -74,7 +86,7 @@ font-weight: 50;
 
   color: #2f2b27;
 
-  font-family: "Cormorant Garamond", serif;
+ font-family: "Dancing Script", cursive;
 
   font-size: clamp(1.15rem, 2.5vw, 1.4rem);
 
@@ -125,7 +137,7 @@ font-weight: 50;
   background-color: #f6f1e9;
   color: #2f2b27;
 
-  font-family: "Cormorant Garamond", serif;
+ font-family: "Dancing Script", cursive;
 }
 
 
@@ -178,7 +190,7 @@ font-weight: 50;
   border: 1px solid #747956;
   border-radius: 999px;
   color: #747956;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Dancing Script", cursive;
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
 }
 
@@ -196,13 +208,12 @@ font-weight: 50;
   border-radius: 999px;
   background-color: #747956;
   color: #f6f1e9;
-  font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.25rem, 2.5vw, 1.3rem);
   letter-spacing: 0.08em;
   cursor: pointer;
-  font-family: "Great Vibes", cursive;
   letter-spacing: 0.04rem;
 font-weight: 50;
+font-family: "Dancing Script", cursive;
 }
 
 .confirmation__button:hover {
@@ -213,7 +224,7 @@ font-weight: 50;
 .confirmation__message {
   margin: -1rem 0 0;
   color: #747956;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Dancing Script", cursive;
   font-size: clamp(1.15rem, 2.5vw, 1.35rem);
 }
 
@@ -240,4 +251,12 @@ font-weight: 50;
 
 .confirmation__message--error {
   color: #9b4f46;
+}
+
+
+
+@media (max-width: 380px) {
+  .confirmation__title {
+    font-size: clamp(1.9rem, 9.5vw, 2.3rem);
+  }
 }

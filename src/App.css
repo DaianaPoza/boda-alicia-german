@@ -1,4 +1,9 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap');
+
+
+
+
 .music-button {
   position: fixed;
   right: 1.25rem;
@@ -76,7 +81,7 @@
 
 .cover,
 .invitation {
-  font-family: "Cormorant Garamond", serif;
+font-family: "Dancing Script", cursive;
   font-style: italic;
   font-weight: 500;
 }
@@ -88,7 +93,7 @@
 .invitation input,
 .invitation select,
 .invitation textarea {
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Dancing Script", cursive;
   font-style: italic;
   font-weight: 500;
 }

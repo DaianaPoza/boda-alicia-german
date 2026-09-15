@@ -37,7 +37,7 @@ function Momentos() {
           className="moments__title"
           id="moments-title"
         >
-          Momentos de evento
+          Momentos del evento
         </h2>
 
         <div className="moments__timeline">

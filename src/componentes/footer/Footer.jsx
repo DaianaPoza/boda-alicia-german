@@ -17,20 +17,19 @@ function Footer() {
         aria-hidden="true"
       ></div>
 
-      <div className="footer__content">
-        <p className="footer__names">
-          Alicia <span>&</span> German
-        </p>
+    <div className="footer__content">
+  <p className="footer__names">
+    Alicia <span>y</span> German
+  </p>
 
-        <p className="footer__phrase">
-          Nos vemos para compartir una noche
-          inolvidable...
-        </p>
+  <p className="footer__date">
+    02 · 01 · 2027
+  </p>
 
-        <p className="footer__date">
-          02 · 01 · 2027
-        </p>
-      </div>
+  <p className="footer__phrase">
+    Celebramos la familia que construimos
+  </p>
+</div>
     </footer>
   );
 }

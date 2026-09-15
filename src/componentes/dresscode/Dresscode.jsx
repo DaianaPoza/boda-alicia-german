@@ -24,13 +24,6 @@ function Dresscode() {
           Elegí un look que te haga sentir bien y te permita
           disfrutar de cada momento </p>
 
-        <p className="dresscode__style">
-          Estilo:
-          <span> natural, elegante y relajado</span>
-        </p>
-
-
-
 
 <div className="dresscode__palette">
   <h3 className="dresscode__palette-title">

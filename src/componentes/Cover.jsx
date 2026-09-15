@@ -6,7 +6,7 @@ function Cover({ onEnter }) {
     <main className="cover">
       <div className="cover__content">
         <h1 className="cover__names">
-          Alicia <span>&</span> German
+          Alicia <span>y</span> German
         </h1>
 
         <img
@@ -17,8 +17,7 @@ function Cover({ onEnter }) {
         />
 
         <p className="cover__phrase">
-          Empieza una nueva etapa en nuestras vidas.. 
-          <br /> y no imaginábamos celebrarla de otra manera que rodeados de las personas que queremos.
+          El amor nos unió, <br /> la vida nos hizo familia <br />y hoy celebrar nuestra historia <br />junto a quienes son parte de ella
         </p>
 
         <button

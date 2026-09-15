@@ -55,13 +55,23 @@
   z-index: -2;
 
   background:
+    /* Degradado inferior más intenso */
+    linear-gradient(
+      to top,
+      rgba(246, 241, 233, 0.98) 0%,
+      rgba(246, 241, 233, 0.9) 10%,
+      rgba(246, 241, 233, 0.68) 20%,
+      rgba(246, 241, 233, 0.3) 30%,
+      transparent 42%
+    ),
+
+    /* Degradado superior actual */
     linear-gradient(
       to bottom,
       rgba(246, 241, 233, 0.62) 0%,
-      rgba(246, 241, 233, 0.45) 30%,
-      rgba(246, 241, 233, 0.18) 58%,
-      rgba(47, 43, 39, 0.08) 78%,
-      rgba(47, 43, 39, 0.26) 100%
+      rgba(246, 241, 233, 0.45) 24%,
+      rgba(246, 241, 233, 0.16) 40%,
+      transparent 55%
     );
 
   pointer-events: none;
@@ -71,27 +81,8 @@
 
 /* Contenido distribuido sobre la fotografía */
 
-.footer__content {
-  position: relative;
 
-  z-index: 1;
-
-  width: min(100%, 38rem);
-  min-height: calc(100svh - 7rem);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin-inline: auto;
-
-  text-align: center;
-
-  text-shadow:
-    0 2px 5px rgba(20, 18, 15, 0.75),
-    0 4px 14px rgba(20, 18, 15, 0.45);
-}
-
+.footer__content { position: relative; z-index: 1; width: min(100%, 38rem); min-height: calc(100svh - 7rem); display: flex; flex-direction: column; align-items: center; margin-inline: auto; text-align: center; text-shadow: 0 2px 5px rgba(20, 18, 15, 0.75), 0 4px 14px rgba(20, 18, 15, 0.45); }
 /* Nombres */
 
 .footer__names {
@@ -99,7 +90,7 @@
 
   color: #f6f1e9;
 
-  font-family: "Cormorant Garamond", serif;
+font-family: "Dancing Script", cursive;
   font-size: clamp(2.25rem, 8vw, 4rem);
   font-style: italic;
   font-weight: 500;
@@ -109,7 +100,7 @@
 }
 
 .footer__names span {
-  color: #d5b783;
+  color: #885f18;
   font-style: italic;
 }
 
@@ -132,16 +123,32 @@
 /* Frase */
 
 .footer__phrase {
-  max-width: 28rem;
-  margin: 0 auto;
-  color: #f6f1e9;
-  font-size: clamp(1.4rem, 5vw, 2rem);
-  line-height: 1.4;
+  width: min(100%, 24rem);
+  max-width: 24rem;
+
+  /*
+    El margen superior automático empuja
+    la frase hacia el final del footer.
+  */
+
+  margin: auto auto 0;
+
+  color: #56562d;
+
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(1.7rem, 6vw, 2rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02rem;
+
+  text-align: center;
   text-wrap: balance;
-transform: translateY(1rem);
-font-family: "Great Vibes", cursive;
-  letter-spacing: 0.04rem;
-font-weight: 50;
+
+  text-shadow:
+    0 1px 3px rgba(246, 241, 233, 0.9);
+
+
+    transform: translateY(-2rem);
 
 
 }
@@ -149,17 +156,18 @@ font-weight: 50;
 /* Fecha ubicada en la parte inferior */
 
 .footer__date {
-  margin: auto 0 0;
-  color: #ead9bc;
-  font-size: clamp(2rem, 3vw, 1.25rem);
-  font-style: italic;
+  margin: 0.8rem 0 0;
+
+  color: #56562d;
+
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
   font-weight: 500;
   line-height: 1;
-  letter-spacing: 0.2em;
-  font-family: "Great Vibes", cursive;
   letter-spacing: 0.04rem;
-font-weight: 50;
-  
+
+  text-shadow:
+    0 1px 3px rgba(246, 241, 233, 0.9);
 }
 
 /* Celulares */
@@ -167,9 +175,8 @@ font-weight: 50;
 @media (max-width: 600px) {
   .footer {
     min-height: 100svh;
-
     padding:
-      4rem
+      2.25rem
       1.25rem
       2.5rem;
   }
@@ -185,7 +192,7 @@ font-weight: 50;
   }
 
   .footer__content {
-    min-height: calc(100svh - 6.5rem);
+    min-height: calc(100svh - 4.75rem);
   }
 
 
@@ -193,11 +200,21 @@ font-weight: 50;
     font-size: clamp(2.25rem, 8vw, 4rem);
   }
 
-  .footer__phrase {
-    max-width: 22rem;
+.footer__date {
+  margin-top: 0.65rem;
 
-    font-size: clamp(1.25rem, 6vw, 1.75rem);
-  }
+  font-size: clamp(1.35rem, 5.5vw, 1.7rem);
+}
+
+.footer__phrase {
+  width: min(100%, 19rem);
+  max-width: 19rem;
+
+  margin: auto auto 0;
+
+  font-size: clamp(1.5rem, 6vw, 1.8rem);
+  line-height: 1.2;
+}
 
 }
 
@@ -208,10 +225,11 @@ font-weight: 50;
     font-size: 2.15rem;
   }
 
-  .footer__phrase {
-    max-width: 22rem;
-  font-size: clamp(1.35rem, 6vw, 1.75rem);
-  }
+ .footer__phrase {
+  width: min(100%, 17rem);
+
+  font-size: clamp(1.4rem, 6.5vw, 1.65rem);
+}
 
   .footer__background {
     object-position: 51% center;
@@ -247,17 +265,10 @@ font-weight: 50;
 
 
 .footer__names,
-.footer__phrase,
-.footer__date{
+.footer__phrase {
   color: #56562d;
 
   text-shadow:
     0 1px 3px rgba(112, 110, 110, 0.8);
 }
 
-.footer__date{
-  color: #f5f5ee;
-
-  text-shadow:
-    0 1px 3px rgba(242, 243, 239, 0.8);
-}

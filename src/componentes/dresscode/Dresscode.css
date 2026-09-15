@@ -15,10 +15,10 @@
 .dresscode__title {
   margin: 0;
   color: #f6f1e9;
-  font-size: clamp(3rem, 6vw, 3rem);
-  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 3rem);
+  
   line-height: 1;
-  font-family: "Great Vibes", cursive;
+  font-family: "Dancing Script", cursive;
   letter-spacing: 0.04rem;
 font-weight: 50;
 }
@@ -26,10 +26,10 @@ font-weight: 50;
 .dresscode__intro {
   max-width: 34rem;
   margin: clamp(2.5rem, 6vw, 4rem) auto 0;
-  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
   line-height: 1.5;
   text-wrap: balance;
-  font-family: "Great Vibes", cursive;
+  font-family: "Dancing Script", cursive;
   letter-spacing: 0.04rem;
 font-weight: 50;
 }
@@ -42,7 +42,7 @@ font-weight: 50;
   border: 1px solid rgba(246, 241, 233, 0.45);
   font-size: clamp(1.3rem, 2.8vw, 1.6rem);
   line-height: 1.4;
-  font-family: "Great Vibes", cursive;
+  font-family: "Dancing Script", cursive;
   letter-spacing: 0.04rem;
 font-weight: 50;
 }
@@ -57,7 +57,7 @@ font-weight: 50;
   font-size: clamp(2rem, 4vw, 2.4rem);
   
   line-height: 1;
-  font-family: "Great Vibes", cursive;
+  font-family: "Dancing Script", cursive;
   letter-spacing: 0.04rem;
 font-weight: 50;
  margin-bottom: 1.5rem;
@@ -69,7 +69,7 @@ font-weight: 50;
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   line-height: 1.45;
   text-wrap: balance;
-  font-family: "Great Vibes";
+ font-family: "Dancing Script", cursive;
   letter-spacing: 0.04rem;
 font-weight: 50;
 }

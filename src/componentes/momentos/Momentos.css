@@ -26,10 +26,10 @@
   margin: 0;
 
   color: #747956;
-  font-size: clamp(3rem, 6vw, 3rem);
+  font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 50;
   line-height: 1;
-  font-family: "Great Vibes", cursive;
+ font-family: "Dancing Script", cursive;
   letter-spacing: 0.04rem;
 }
 
@@ -160,7 +160,7 @@
   font-weight: 50;
   line-height: 1.15;
   text-wrap: balance;
-  font-family: "Great Vibes", cursive;
+ font-family: "Dancing Script", cursive;
   letter-spacing: 0.04rem;
 }
 
