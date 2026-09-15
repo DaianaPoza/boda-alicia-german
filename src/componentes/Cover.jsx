@@ -17,7 +17,7 @@ function Cover({ onEnter }) {
         />
 
         <p className="cover__phrase">
-          El amor nos unió, <br /> la vida nos hizo familia <br />y hoy celebrar nuestra historia <br />junto a quienes son parte de ella
+          El amor nos unió, <br /> la vida nos hizo familia <br />y queremos celebrar nuestra historia <br />junto a quienes son parte de ella
         </p>
 
         <button
